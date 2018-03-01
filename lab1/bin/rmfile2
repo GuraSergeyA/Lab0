@@ -1,0 +1,13 @@
+if test -f $1
+then
+	echo Удалить файлы по текущей маске:$1 ?
+	read q
+	if test $q = y
+	then
+	   rm $1
+#	   find . -type f -name '$1' -delete
+	   echo Файлы удалены
+	else
+	   echo Отмена удаления
+	fi
+fi
