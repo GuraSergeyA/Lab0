@@ -1,0 +1,14 @@
+if test -f $1
+then
+	echo Удалить файл $1?
+	read q
+	if test $q = y
+	then
+	   rm $1
+	   echo Файл удалён
+	else
+	   echo Отмена удаления
+	fi
+else
+    echo Файл не найден
+fi
